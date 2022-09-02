@@ -1,17 +1,25 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import {
+  init,
+  events,
+  vitals,
+  measure,
+  network,
+  profiler,
+} from "@palette.dev/browser";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+init({
+  key: "YOUR_CLIENT_KEY",
+  // Collect click, web vitals, network, performance events, and profiles
+  plugins: [events(), vitals(), network(), measure(), profiler()],
+});
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

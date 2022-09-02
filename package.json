@@ -4,6 +4,8 @@
   "private": true,
   "dependencies": {
     "@babel/core": "^7.16.0",
+    "@palette.dev/browser": "^1.5.2",
+    "@palette.dev/webpack-plugin": "^1.1.4",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.3",
     "@svgr/webpack": "^5.5.0",
     "@testing-library/jest-dom": "^5.16.5",
